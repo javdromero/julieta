@@ -9,7 +9,7 @@ function Hero({ onJoin, onMenu }) {
     <section className="jlx-hero">
       <div className="jlx-hero__copy reveal">
         <Eyebrow>Cafetería · Librería · Piñas</Eyebrow>
-        <h1 className="jlx-hero__h1"><span style={{ color: '#2A2017' }}>Donde el café</span><br /><span style={{ color: '#E2C996' }}>encuentra</span><span className="jlx-script"> un buen libro</span></h1>
+        <h1 className="jlx-hero__h1"><span style={{ color: '#2A2017' }}>Donde el café</span><br /><span style={{ color: '#2A2017' }}>encuentra</span><span className="jlx-script"> un buen libro</span></h1>
         <p className="jlx-lead">La primera cafetería-librería de la parte alta de El Oro. Café de
           especialidad, desayunos de autor y estanterías para perderse toda la tarde.</p>
         <div className="jlx-row">
@@ -39,7 +39,7 @@ function Story() {
   return (
     <section className="jlx-story" id="historia">
       <div className="jlx-story__art reveal">
-        <img src={`${L_IMG}/tigrillo.jpg`} alt="Rincón de Julieta" />
+        <img src={`${L_IMG}/local.jpg`} alt="Rincón de Julieta" />
       </div>
       <div className="jlx-story__copy reveal reveal--right">
         <Eyebrow>Nuestra Historia</Eyebrow>
