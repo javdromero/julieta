@@ -1,0 +1,175 @@
+/* ===== tokens/fonts.css ===== */
+/* Julieta Books & Coffee — Webfonts
+   ------------------------------------------------------------------
+   NOTE: The real brand uses a bespoke high-contrast fashion serif in
+   its logo and a signature script on marketing. Those files were not
+   provided, so the nearest Google Fonts substitutes are used:
+     · Cormorant Garamond  → display / literary serif (logo, headings)
+     · Parisienne          → signature script accent (taglines, flourish words)
+     · Jost                → clean geometric sans (body, UI, small-caps labels)
+   Flagged for the client — swap in licensed brand fonts when available. */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600;700&family=Parisienne&display=swap');
+
+
+/* ===== tokens/colors.css ===== */
+/* Julieta Books & Coffee — Color tokens
+   Warm, literary, coffee-house palette: creams & paper, espresso browns,
+   muted olive-gold, deep maroon, and a muted forest green. */
+
+:root {
+  /* ---- Base: warm neutrals (paper / cream / sand) ---- */
+  --paper:        #F6EFE1; /* page background — warm paper cream */
+  --cream:        #EFE6D5; /* soft cream surface */
+  --linen:        #FBF7EE; /* lightest, near-white card surface */
+  --sand:         #E4D7BF; /* beige panel / muted fills */
+  --oat:          #D8C7A9; /* deeper beige, borders on cream */
+
+  /* ---- Base: espresso / coffee browns (ink) ---- */
+  --espresso:     #2C2118; /* darkest — primary ink, deep roast */
+  --coffee:       #4A382A; /* rich brown */
+  --mocha:        #6B5238; /* mid brown, secondary text on cream */
+  --latte:        #937A5C; /* muted brown, tertiary/placeholder */
+  --taupe:        #B79B7C; /* warm tan — marketing accent block */
+
+  /* ---- Accents ---- */
+  --gold:         #8C763B; /* muted olive-gold — menu serif, rules */
+  --gold-soft:    #B79A55; /* lighter gold for highlights */
+  --maroon:       #7A1E22; /* deep maroon — special / festive */
+  --maroon-soft:  #9B3A3A;
+  --forest:       #435239; /* muted forest green — nature/success */
+  --forest-soft:  #5E7150;
+
+  /* ---- Semantic aliases ---- */
+  --surface-page:    var(--paper);
+  --surface-cream:   var(--cream);
+  --surface-card:    var(--linen);
+  --surface-panel:   var(--sand);
+  --surface-inverse: var(--espresso);
+
+  --text-strong:     var(--espresso);
+  --text-body:       var(--coffee);
+  --text-muted:      var(--mocha);
+  --text-subtle:     var(--latte);
+  --text-on-dark:    var(--cream);
+  --text-on-accent:  var(--linen);
+
+  --border-hairline: rgba(44, 33, 24, 0.12);
+  --border-soft:     var(--oat);
+  --border-strong:   var(--mocha);
+
+  --accent-primary:   var(--espresso); /* primary CTA fill */
+  --accent-secondary: var(--gold);     /* gold rules & secondary */
+  --accent-nature:    var(--forest);   /* success / eco / genre */
+  --accent-festive:   var(--maroon);   /* limited menus & promos */
+
+  --focus-ring:      rgba(140, 118, 59, 0.55); /* gold focus glow */
+
+  /* status */
+  --success: var(--forest);
+  --danger:  var(--maroon);
+  --info:    var(--mocha);
+}
+
+
+/* ===== tokens/typography.css ===== */
+/* Julieta Books & Coffee — Typography tokens */
+
+:root {
+  /* ---- Families ---- */
+  --font-display: 'Cormorant Garamond', 'Georgia', serif;   /* headings, logo */
+  --font-script:  'Parisienne', 'Snell Roundhand', cursive; /* signature accent */
+  --font-sans:    'Jost', 'Helvetica Neue', system-ui, sans-serif; /* body / UI */
+
+  /* ---- Weights ---- */
+  --fw-light:     300;
+  --fw-regular:   400;
+  --fw-medium:    500;
+  --fw-semibold:  600;
+  --fw-bold:      700;
+
+  /* ---- Type scale (fluid-ish, px) ---- */
+  --fs-display:   clamp(2.75rem, 6vw, 4.5rem);
+  --fs-h1:        2.75rem;   /* 44 */
+  --fs-h2:        2.125rem;  /* 34 */
+  --fs-h3:        1.5rem;    /* 24 */
+  --fs-h4:        1.25rem;   /* 20 */
+  --fs-lead:      1.1875rem; /* 19 intro paragraphs */
+  --fs-body:      1rem;      /* 16 */
+  --fs-sm:        0.875rem;  /* 14 */
+  --fs-xs:        0.75rem;   /* 12 */
+  --fs-eyebrow:   0.75rem;   /* 12 small-caps label */
+
+  /* ---- Line heights ---- */
+  --lh-tight:   1.05;
+  --lh-snug:    1.2;
+  --lh-normal:  1.5;
+  --lh-relaxed: 1.7;
+
+  /* ---- Letter spacing ---- */
+  --ls-eyebrow:  0.22em;
+  --ls-caps:     0.14em;
+  --ls-wide:     0.06em;
+  --ls-tight:   -0.01em;
+}
+
+
+/* ===== tokens/spacing.css ===== */
+/* Julieta Books & Coffee — Spacing & layout tokens (4px base grid) */
+
+:root {
+  --space-0:   0;
+  --space-1:   0.25rem;  /* 4  */
+  --space-2:   0.5rem;   /* 8  */
+  --space-3:   0.75rem;  /* 12 */
+  --space-4:   1rem;     /* 16 */
+  --space-5:   1.5rem;   /* 24 */
+  --space-6:   2rem;     /* 32 */
+  --space-7:   3rem;     /* 48 */
+  --space-8:   4rem;     /* 64 */
+  --space-9:   6rem;     /* 96 */
+  --space-10:  8rem;     /* 128 */
+
+  /* semantic */
+  --gutter:        var(--space-5);
+  --section-y:     var(--space-9);
+  --card-pad:      var(--space-5);
+  --field-gap:     var(--space-4);
+
+  --container:      1180px;
+  --container-text: 720px;  /* comfortable reading measure */
+}
+
+
+/* ===== tokens/effects.css ===== */
+/* Julieta Books & Coffee — Radii, borders, shadows, motion */
+
+:root {
+  /* ---- Corner radii (soft, gentle — never pill-heavy) ---- */
+  --radius-xs:  4px;
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-lg:  18px;
+  --radius-xl:  26px;
+  --radius-pill: 999px;
+
+  /* ---- Borders ---- */
+  --border-width: 1px;
+  --hairline: 1px solid var(--border-hairline);
+
+  /* ---- Shadows: warm, soft, low — like light in a reading nook ---- */
+  --shadow-xs:  0 1px 2px rgba(44, 33, 24, 0.06);
+  --shadow-sm:  0 2px 8px rgba(44, 33, 24, 0.08);
+  --shadow-md:  0 10px 26px rgba(44, 33, 24, 0.10);
+  --shadow-lg:  0 22px 50px rgba(44, 33, 24, 0.14);
+  --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+
+  /* ---- Motion ---- */
+  --ease-out:   cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-soft:  cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast:   140ms;
+  --dur-base:   240ms;
+  --dur-slow:   420ms;
+}
+
+
